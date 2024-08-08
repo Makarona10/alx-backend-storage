@@ -1,6 +1,7 @@
 -- creates a trigger that decreases the quantity of an item
 -- 555555555555
 
+
 DELIMITER $$
 CREATE TRIGGER decrease_items
 AFTER INSERT ON orders
