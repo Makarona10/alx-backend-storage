@@ -3,7 +3,7 @@
 
 
 -- DELIMITER $$
-CREATE TRIGGER decrease_items
+-- CREATE TRIGGER decrease_items
 -- AFTER INSERT ON orders
 -- FOR EACH ROW
 -- BEGIN
@@ -15,8 +15,10 @@ CREATE TRIGGER decrease_items
 --     WHERE name = NEW.item_name;
 
 -- END$$
+
+-- DELIMITER ;
+
+CREATE TRIGGER buy_trigger
 AFTER INSERT ON orders
 FOR EACH ROW
 UPDATE items SET quantity = quantity - NEW.number WHERE name = NEW.item_name;
-
--- DELIMITER ;
