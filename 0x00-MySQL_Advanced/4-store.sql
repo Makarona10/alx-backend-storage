@@ -1,6 +1,16 @@
 -- creates a trigger that decreases the quantity of an item
-CREATE TRIGGER buy_trigger
+DELIMITER $$
+CREATE TRIGGER decrease_items
 AFTER INSERT ON orders
 FOR EACH ROW
-UPDATE items SET quantity = quantity - NEW.number WHERE name = NEW.item_name;
+BEGIN
+    DECLARE qnt INT;
+
+    SELECT NEW.number INTO qnt;
+
+    UPDATE items SET quantity = quantity - qnt 
+    WHERE name = NEW.item_name;
+
+END$$
+DELIMITER ;
 
