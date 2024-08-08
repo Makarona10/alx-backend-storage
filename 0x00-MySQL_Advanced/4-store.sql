@@ -1,4 +1,4 @@
---sql script that creates a trigger that decreases
+-- creates a trigger that decreases the quantity of an item
 
 DELIMITER $$
 CREATE TRIGGER decrease_items
@@ -14,4 +14,3 @@ BEGIN
 
 END$$
 DELIMITER ;
-
