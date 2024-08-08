@@ -1,4 +1,6 @@
 -- ranks country origins of bands, ordered by the number of fans
+-- only fans
+
 SELECT origin,
 SUM(fans) as nb_fans
 FROM metal_bands
