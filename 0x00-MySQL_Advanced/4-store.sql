@@ -1,5 +1,5 @@
--- creates a trigger that decreases the quantity of an item
--- 555555555555
+--SQL script that creates a trigger that decreases
+--the quantity of an item after adding a new order.
 
 
 DELIMITER $$
@@ -15,5 +15,5 @@ BEGIN
     WHERE name = NEW.item_name;
 
 END$$
-DELIMITER ;
 
+DELIMITER ;
