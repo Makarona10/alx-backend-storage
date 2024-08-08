@@ -1,6 +1,4 @@
---SQL script that creates a trigger that decreases
---the quantity of an item after adding a new order
-
+--sql script that creates a trigger that decreases
 
 DELIMITER $$
 CREATE TRIGGER decrease_items
