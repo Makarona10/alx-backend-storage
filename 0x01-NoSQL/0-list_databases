@@ -1,2 +1,3 @@
-// Create database.
-use my_db;
+// list databases.
+show dbs;
+
